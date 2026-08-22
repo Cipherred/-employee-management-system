@@ -1,70 +1,3 @@
-# Employee Management System
-
-**Employee Management System built with Spring Boot, REST APIs, JPA/Hibernate, DTOs, Validation, and Spring Security with role-based access control.**
-
-A secure full-stack Employee Management System built with **Java, Spring Boot, Spring Security, JWT, Spring Data JPA, Microsoft SQL Server (MSSQL), and JavaScript**.
-
-The system provides employee management, leave requests, salary advance requests, authentication, role-based authorization, employee-level data isolation, and administrative approval workflows.
-
----
-
-## Tech Stack
-
-- **Backend:** Java, Spring Boot
-- **Security:** Spring Security, JWT, BCrypt
-- **Database:** Microsoft SQL Server (MSSQL)
-- **ORM:** Spring Data JPA / Hibernate
-- **Frontend:** HTML, CSS, JavaScript
-- **API Testing:** Postman
-- **Architecture:** Controller → Service → Repository
-
----
-
-## Key Features
-
-- JWT-based authentication
-- Role-Based Access Control (ADMIN / EMPLOYEE)
-- Employee-level data isolation
-- Employee management
-- Leave request management
-- Salary advance request management
-- Admin approval and rejection workflows
-- RESTful CRUD APIs
-- DTO-based request/response handling
-- Server-side validation
-- Centralized exception handling
-- Relational database mapping
-- Secure authenticated API communication
-
----
-
-# Quick Overview
-
-## ADMIN
-
-Administrators can:
-
-- View and manage employees
-- Add new employees
-- View all leave requests
-- Approve or reject leave requests
-- View all salary advance requests
-- Approve or reject salary advance requests
-
-## EMPLOYEE
-
-Employees can:
-
-- Log in securely
-- Submit leave requests
-- Submit salary advance requests
-- View their own requests
-- Track request status
-
-Employees cannot access another employee's requests.
-
----
-
 # Screenshots
 
 ## 1. Login
@@ -75,27 +8,27 @@ Secure login using employee or administrator credentials.
 
 ---
 
-## 2. Admin Dashboard For Employees
+## 2. Admin Dashboard — Employees
 
-![Employee Dashboard](screenshots/adminDashboard1.png)
+![Admin Dashboard - Employees](screenshots/adminDashboard1.png)
 
-The employee dashboard provides access to employee information and employee-related requests.
-
----
-
-## 3. Leave Requests
-
-![Leave Requests](screenshots/adminDashboard2.png)
-
-Administrators can review employee leave requests and manage their status.
+The administrator dashboard displays employees in the system and provides access to employee management functions.
 
 ---
 
-## 4. Salary Advance Requests
+## 3. Admin Dashboard — Leave Requests
 
-![Advance Requests](screenshots/adminDashboard3.png)
+![Admin Dashboard - Leave Requests](screenshots/adminDashboard2.png)
 
-Administrators can review employee salary advance requests and manage their status.
+The administrator dashboard displays employee leave requests and allows administrators to review and manage their status.
+
+---
+
+## 4. Admin Dashboard — Salary Advance Requests
+
+![Admin Dashboard - Salary Advance Requests](screenshots/adminDashboard3.png)
+
+The administrator dashboard displays employee salary advance requests and allows administrators to review and manage their status.
 
 ---
 
@@ -123,27 +56,27 @@ Employees can submit leave requests by providing a start date, end date, and rea
 
 ---
 
-## 8. Leave Request Management
+## 8. Leave Request
 
 ![Leave Request](screenshots/LeaveRequest.png)
 
-Leave requests are displayed with their employee, dates, reason, status, and available actions.
+Leave requests display the employee, dates, reason, and current request status.
 
 ---
 
 ## 9. Salary Advance Request Form
 
-![Advance Request Form](screenshots/AdvnceRequestFillForm.png)
+![Salary Advance Request Form](screenshots/AdvnceRequestFillForm.png)
 
 Employees can submit salary advance requests by providing an amount and reason.
 
 ---
 
-## 10. Salary Advance Management
+## 10. Salary Advance Request
 
-![Advance Request](screenshots/AdvanceRequest.png)
+![Salary Advance Request](screenshots/AdvanceRequest.png)
 
-Salary advance requests are displayed with their employee, requested amount, reason, and status.
+Salary advance requests display the employee, requested amount, reason, and current request status.
 
 ---
 
@@ -160,20 +93,3 @@ The application validates user input before processing requests. For example, em
 ![Exception Example](screenshots/ExceptionExample.png)
 
 The application handles invalid requests and displays an appropriate error message when a leave request uses a start date in the past.
-
----
-
-# Detailed Documentation
-
-## 1. System Architecture
-
-The backend follows a layered architecture:
-
-```text
-Controller
-    ↓
-Service
-    ↓
-Repository
-    ↓
-Database
