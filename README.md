@@ -1,3 +1,71 @@
+# Employee Management System
+
+**Employee Management System built with Spring Boot, REST APIs, JPA/Hibernate, DTOs, Validation, and Spring Security with role-based access control.**
+
+A secure full-stack Employee Management System built with **Java, Spring Boot, Spring Security, JWT, Spring Data JPA, Microsoft SQL Server (MSSQL), and JavaScript**.
+
+The system provides employee management, leave requests, salary advance requests, authentication, role-based authorization, employee-level data isolation, and administrative approval workflows.
+
+---
+
+## Tech Stack
+
+- **Backend:** Java, Spring Boot
+- **Security:** Spring Security, JWT, BCrypt
+- **Database:** Microsoft SQL Server (MSSQL)
+- **ORM:** Spring Data JPA / Hibernate
+- **Frontend:** HTML, CSS, JavaScript
+- **API Testing:** Postman
+- **Architecture:** Controller → Service → Repository
+
+---
+
+## Key Features
+
+- JWT-based authentication
+- Role-Based Access Control (ADMIN / EMPLOYEE)
+- Employee-level data isolation
+- Employee management
+- Leave request management
+- Salary advance request management
+- Admin approval and rejection workflows
+- RESTful CRUD APIs
+- DTO-based request/response handling
+- Server-side validation
+- Centralized exception handling
+- Relational database mapping
+- Secure authenticated API communication
+
+---
+
+# Quick Overview
+
+## ADMIN
+
+Administrators can:
+
+- View employees
+- Add new employees
+- Manage employee information
+- View all leave requests
+- Approve or reject leave requests
+- View all salary advance requests
+- Approve or reject salary advance requests
+
+## EMPLOYEE
+
+Employees can:
+
+- Log in securely
+- Submit leave requests
+- Submit salary advance requests
+- View their own requests
+- Track request status
+
+Employees cannot access another employee's requests.
+
+---
+
 # Screenshots
 
 ## 1. Login
@@ -93,3 +161,20 @@ The application validates user input before processing requests. For example, em
 ![Exception Example](screenshots/ExceptionExample.png)
 
 The application handles invalid requests and displays an appropriate error message when a leave request uses a start date in the past.
+
+---
+
+# Detailed Documentation
+
+## 1. System Architecture
+
+The backend follows a layered architecture:
+
+```text
+Controller
+    ↓
+Service
+    ↓
+Repository
+    ↓
+Database
