@@ -75,7 +75,7 @@ Secure login using employee or administrator credentials.
 
 ---
 
-## 2. Employee Dashboard
+## 2. Admin Dashboard For Employees
 
 ![Employee Dashboard](screenshots/adminDashboard1.png)
 
